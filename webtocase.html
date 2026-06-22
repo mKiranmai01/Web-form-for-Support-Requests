@@ -117,3 +117,15 @@
     </div>
 
 </body>
+
+
+<script>
+    window.addEventListener('pageshow', function(event) {
+        document.getElementById('caseForm').reset();
+
+        const dynamicFields = document.getElementById('dynamicFields');
+        if(dynamicFields) {
+            dynamicFields.innerHTML = '';
+        }
+    });
+</script>
