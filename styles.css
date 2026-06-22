@@ -14,7 +14,7 @@ body {
     background: white;
     border-radius: 10px;
 
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 
@@ -80,4 +80,18 @@ button {
 
 button:hover {
     background: #1d4ed8;
+}
+
+.case-details-card {
+    background: #fafafa;
+    border: 1px solid #d8dde6;
+    border-radius: 8px;
+    padding: 24px;
+    margin: 20px 0;
+}
+
+.case-details-card h3 {
+    margin: 0 0 20px;
+    font-size: 20px;
+    font-weight: 600;
 }
