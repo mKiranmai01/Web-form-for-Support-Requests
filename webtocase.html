@@ -12,6 +12,8 @@
 
 <body>
 
+    <script src="webtocase.js"></script>
+
     <div class="container">
 
         <h2 class="form-title">Raise a Support Case</h2>
@@ -37,6 +39,7 @@
                 >
             </div>
 
+
             <div class="form-group">
                 <label for="email">Email <span style="color: red;">*</span></label>
                 <input
@@ -60,22 +63,20 @@
             </div>
 
             <div class="form-group">
-                <label>Case Type <span style="color: red;">*</span></label>
-
-                <div id="dynamicFields">
-                    <select id="caseType" name="caseType" required>
+                <label for="caseType">Case Type <span style="color: red;">*</span></label>
+                    <select id="caseType" name="type" required onchange="showFields()">
                         <option value ="">Select a case type</option>
-                        <option>Invoice Request</option>
-                        <option>Order Inquiry</option>
+                        <option value="invoice">Invoice Request</option>
+                        <!--<option value="order">Order Inquiry</option>-->
                         <option>Product Inquiry</option>
                         <option>Product Complaint</option>
-                        <option>Information Update</option>
+                        <option value="info">Information Update</option>
                         <option>General Inquiry</option>
-                        <option>Feedback / Suggestion</option>
+                        <option >Feedback / Suggestion</option>
                     </select>
-                </div>
-
             </div>
+
+            <div id="dynamicFields"></div>
 
             <div class="form-group">
                 <label for="subject">Subject <sapn style="color: red">*</sapn></label>
@@ -91,19 +92,20 @@
 
 
             <div class="form-group">
-                <label for="description">Description <span style="color:red;">*</span></label>
+                <label for="description">Description</label>
                 <textarea 
                     id="description"
                     name="description"
-                    placeholder="Provide detailed information about your issue"
-                    required></textarea>  
+                    placeholder="Provide detailed information about your issue"></textarea>  
             </div>
 
+            <!--
             <div class="form-file">
                 <label>Attachment</label>
                 <input type="file">
 
             </div>
+            -->
 
 
         <input type="hidden"  id="external" name="external" value="1" /><br>
