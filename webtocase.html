@@ -22,7 +22,9 @@
             Fill in the details below and our support team will get back to you.
         </p>
 
-        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgK00000EbSdj" method="POST">
+        <form action="https://webto.salesforce.com/servlet/servlet.WebToCase?encoding=UTF-8&orgId=00DgK00000EbSdj"
+        method="POST"
+        id="caseForm">
 
         <input type=hidden name="orgid" value="00DgK00000EbSdj">
         <input type=hidden name="retURL" value="https://mkiranmai01.github.io/Web-form-for-Support-Requests/thank-you.html">
@@ -52,13 +54,12 @@
             </div>
 
             <div class="form-group">
-                <label for="phone">Phone <span style="color: red;">*</span></label>
+                <label for="phone">Phone </label>
                 <input
                     type="tel"
                     id="phone"
                     name="phone"
                     placeholder="Enter your phone number"
-                    required
                 >
             </div>
 
@@ -66,13 +67,11 @@
                 <label for="caseType">Case Type <span style="color: red;">*</span></label>
                     <select id="caseType" name="type" required onchange="showFields()">
                         <option value ="">Select a case type</option>
-                        <option value="invoice">Invoice Request</option>
                         <!--<option value="order">Order Inquiry</option>-->
-                        <option>Product Inquiry</option>
-                        <option>Product Complaint</option>
-                        <option value="info">Information Update</option>
+                        <option>Product Issue</option>
+                        <option>Billing Issue</option>
+                        <option>Information Update</option>
                         <option>General Inquiry</option>
-                        <option >Feedback / Suggestion</option>
                     </select>
             </div>
 
@@ -117,7 +116,6 @@
     </div>
 
 </body>
-
 
 <script>
     window.addEventListener('pageshow', function(event) {
